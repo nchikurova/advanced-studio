@@ -1,0 +1,13 @@
+.polygons {
+    fill:white;
+    stroke: grey;
+}
+
+.dots{
+    fill:darkgrey;
+}
+
+/* .polygons path:hover {
+    fill:yellow;
+
+} */
