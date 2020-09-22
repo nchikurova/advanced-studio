@@ -13,7 +13,7 @@ While data for Phase 2 will be still collecting, I plan to work on Phase 1. Tabl
 
 * Who’s more likely to save their check?
 * How are people spending it?
-* How does stimulus check using depend on state, household income, etc?
+* How does stimulus check use depend on state, household income, etc?
 * How did stimulus payments help Americans?
 * What are the relationship between the  of citizen (employed/ unemployed/ self-employed/ small business owner, marital status, health status, etc) and the way stimulus checks were spent?
 * What are the most popular ways to spend these money depending on state and other categories?
