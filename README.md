@@ -14,5 +14,10 @@ While data for Phase 2 will be still collecting, I plan to work on Phase 1. Tabl
 * Who’s more likely to save their check?
 * How are people spending it?
 * How does stimulus check using depend on state, household income, etc?
+* How did stimulus payments help Americans?
+* What are the relationship between the  of citizen (employed/ unemployed/ self-employed/ small business owner, marital status, health status, etc) and the way stimulus checks were spent?
+* What are the most popular ways to spend these money depending on state and other categories?
 
 I plan to start with overall vision and total numbers, and then narrow down to categorical data. Also, If I have time, I also would like to find data on unemployment and see how the way stimulus check was used differs for employed and unemployed citizens. 
+
+The biggest challenge for me is to understand the data and sort it out the right way. Idealy, I would like to place Phase 1 and Phase 2 weeks together in one the visualisations to compare the beginning of pandemic and the middle of it, and to see if there are any correlations. I also need to choose certain categories like education, food, housing and see what angles I can present this data and what audience I strike for. So far, I think this project might be interesting for all American citizens, mostly adults, or teenagers who are interested in finance, social and economic studies.
