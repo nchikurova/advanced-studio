@@ -30,3 +30,13 @@ The biggest challenge for me is to understand the data and sort it out the right
 - `openpyxl`
 
 ## Add data description!
+
+        "total": total
+        "wrent": occupied without rent
+        "noconf": no confidence
+        "slightconf": slight confidence
+        "modconf": moderate confidence
+        "highconf": high confidence
+        "deferred": payment is/will be deferred
+        "didnotrep": did not report
+        "didnottenure": did not report to tenture
