@@ -1,0 +1,21 @@
+.trend {
+    fill: #d9ffb3;
+    stroke: #336600;
+    stroke-width: 2;
+    stroke-linejoin: round;
+  }
+  /* .dropdown {
+    background-color:#d9ffb3;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    width: 300px;
+    opacity: 0.8;
+} */
+
+.dropdown-arrow{
+    background-color: #d9ffb3;
+}
