@@ -1,3 +1,21 @@
+// // instantiate the scrollama
+// const scroller = scrollama();
+
+// // setup the instance, pass callback functions
+// scroller
+//     .setup({
+//         step: ".step",
+//     })
+//     .onStepEnter((response) => {
+//         // { element, index, direction }
+//     })
+//     .onStepExit((response) => {
+//         // { element, index, direction }
+//     });
+
+// // setup resize event
+// window.addEventListener("resize", scroller.resize);
+
 d3.csv("../lib/data/weekly_total.csv", d => ({
     ...d,
     count: +d.count.split(",").join("")
@@ -10,9 +28,7 @@ d3.csv("../lib/data/weekly_total.csv", d => ({
             paddingInner = 0.2,
             margin = { top: 40, bottom: 40, left: 60, right: 40 };
 
-
         console.log(data);
-
 
         /** SCALES */
         // reference for d3.scales: https://github.com/d3/d3-scale
@@ -77,4 +93,26 @@ d3.csv("../lib/data/weekly_total.csv", d => ({
                 .attr("x", 50)
                 .attr("y", 50)
         });
+
+        const svg1 = d3
+            .select("#d3-container1")
+            .append("svg")
+            .attr("width", 6600)
+            .attr("height", 600);
+        svg1.append("circle")
+            .attr("cx", 400)
+            .attr("cy", 400)
+            .attr("r", 150)
+            .attr("fill", "pink")
+        const svg2 = d3
+            .select("#d3-container2")
+            .append("svg")
+            .attr("width", 600)
+            .attr("height", 600);
+        svg2.append("rect")
+            .attr("x", 300)
+            .attr("y", 300)
+            .attr("width", 200)
+            .attr("height", 400)
+            .attr("fill", "lightgreen")
     });

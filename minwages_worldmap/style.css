@@ -16,6 +16,9 @@ body {
   
   path.state {
     stroke: black;
-    fill:#ffe6e6;
+ 
 
   }
+  .row{
+    color: red;
+}
