@@ -1,15 +1,17 @@
 
-d3.csv("../lib/data/Age1.csv", d3.autoType).then(data => {
+d3.csv("../lib/data/totals_weeks.csv", d3.autoType).then(data => {
 
     console.log(data);
     const margin = { top: 30, right: 30, bottom: 40, left: 60 }
     width = 660 - margin.left - margin.right;
     height = 400 - margin.bottom - margin.top;
 
-    // const myGroups = ["18 - 24", "25 - 39", "40 - 54", "55 - 64", "65 and above"]
-    const myGroups = [...new Set(data.map(d => d.group))]
-    const myVars = [...new Set(data.map(d => d.variable))]
-    //["v1", "v2", "v3", "v4", "v5", "v6", "v7", "v8", "v9"]
+
+    const myGroups = [...new Set(data.map(d => d.week))]
+    const myVars = [...new Set(data.map(d => d.level))]
+
+    console.log("myGroups", myGroups)
+    console.log("myVars", myVars)
 
     const xScale = d3.scaleBand()
         .domain(myGroups)
@@ -41,7 +43,7 @@ d3.csv("../lib/data/Age1.csv", d3.autoType).then(data => {
         .attr("class", "axis-label")
         .attr("x", "50%")
         .attr("dy", "3em")
-        .text("Age")
+        .text("Weeks")
         .attr("font-size", "12")
         .attr("fill", "black")
 
@@ -54,27 +56,35 @@ d3.csv("../lib/data/Age1.csv", d3.autoType).then(data => {
         .attr("y", "50%") //in the middle of line
         .attr("dx", "-3em")
         .attr("writing-mode", "vertical-rl")
-        .text("Variables")
+        .text("Confidence level")
         .attr("font-size", "12")
         .attr("fill", "black")
 
     // color scale
 
-    var myColor = d3.scaleLinear()
-        .range(["#F4D03F", "#F7DC6F", "#F9E79F", "#FCF3CF", "#D4E6F1", "#A9CCE3", "#7FB3D5", "#5499C7", "#2980B9", "#2471A3", "#1F618D", "#1A5276", "#154360"])
-        //.range(["#E8F8F5", "#0E6251"])
-        .domain(data.map(d => +d.value.split(",").join("")));
-    console.log(myColor.domain())
+    const myColor = d3.scaleLinear()
+        .range(["#A9D6E5"
+            // , "#89C2D9"
+            // , "#61A5C2"
+            // , "#2C7DA0"
+            // , "#2A6F97"
+            // , "#23679A"
+            , "#013A63"])
+        //GREEN//.range(["#E8F8F5", "#0E6251"])
+        //.range(["#C8E1E5", "#0e2629"])
+        //.domain(d3.extent(data, d => +d.count.split(",").join("")))
+        .domain(data.map(d => +d.count.split(",").join("")));
+    console.log("color", myColor.domain())
 
     svg
         .selectAll()
-        .data(data, function (d) { return d.group + ':' + d.variable; })
+        .data(data, function (d) { return d.week + ':' + d.level; })
         .enter()
         .append("rect")
-        .attr("x", d => xScale(d.group))
-        .attr("y", d => yScale(d.variable))
+        .attr("x", d => xScale(d.week))
+        .attr("y", d => yScale(d.level))
         .attr("width", xScale.bandwidth())
         .attr("height", yScale.bandwidth())
-        .style("fill", d => myColor(+d.value.split(",").join("")))
+        .style("fill", d => myColor(+d.count.split(",").join("")))
 
 })

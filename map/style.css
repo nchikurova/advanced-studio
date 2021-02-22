@@ -1,21 +1,61 @@
+body.colors  { 
+    background-color: #E7E7E5; 
+    background-color: #e7eff0;
+    background-color: #C8E1E5;
+    background-color: #B7D0D0;
+    background-color: #82C0CC;
+    background-color: #458A93;
+    background-color: #16697A;
+    background-color: #1C474D;
+    background-color: #23679A;
+    background-color: #0e2629;
+
+
+    background-color: #A9D6E5;
+    background-color: #89C2D9;
+    background-color: #61A5C2;
+    background-color: #2C7DA0;
+    background-color: #2A6F97;
+    background-color: #23679A;
+    background-color: #013A63;
+
+}
+
 body {
-    /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
-    font-family: "Source Sans Pro", sans-serif;
-    padding: 1em 3em;
-    /* background: rgb(207, 189, 188); */
-  }
+  font-family: 'Inria Serif', serif;
+  padding: 1em 3em;
+}
   h1 {
     font-family: Bold;
-    color: #380402;
+    font-weight: 900;
+    color: #E8E9E9;
+    font-size: 75px;
+    line-height: 0.25;
+    padding-left: 15%;
   }
-  
-  #tooltip {
-    display: block;
-    height: 50px;
+  /* better be contrast */
+  h3 {
+    font-weight: 400;
+    color:  #0e2629;  
+    font-size: 35px;
+    line-height: 0.25;
+    padding-left: 15%;
   }
-  
+  div.tooltip {	
+    position: absolute;			
+    text-align: left;			
+    width: 175px;					
+    height: 160px;
+    padding: 15px;			
+    font: 12px;		
+    background-color:  #1C474D;
+    color: white;	
+    pointer-events: none;			
+}
   path.state {
     stroke: black;
-    /* fill:#ffe6e6; */
-
+  }
+  path:hover {
+    stroke-width: 2px;
+    fill: #A48894;
   }
